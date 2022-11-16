@@ -26,6 +26,8 @@ const Background = (props) => {
                 <Button>Register</Button>
             </div>
 
+            <ImageWButton image={image2}>Register</ImageWButton>
+
             <DescriptionPanel />
 
             <img className={classes.bg_img} src={image3} alt="image3" />
