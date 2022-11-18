@@ -1,45 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Card from './Card';
-import Button from './Button'
+// import Card from './Card';
 
 import classes from './Modal.module.css';
 
-const Modal = (props) => {
-    const [userEmail, setUserEmail] = useState('');
-    const [userPass, setUserPass] = useState('');
-
-    const emailChangeHandler = (event) => {
-        setUserEmail(event.target.value);
-    };
-
-    const passChangeHandler = (event) => {
-        setUserPass(event.target.value);
-    };
-
-    const submitHandler = (event) => {
-        event.preventDefault();
-
-        console.log('submit handler!');
-        props.onCloseModal();
-    };
-
+const ModalOverlay = (props) => {
     return (
-        <div>
+        <React.Fragment>
             <div onClick={props.onCloseModal} className={classes.backdrop}></div>
+            {/* <Card className={classes.modal}>
+            {props.children}
+        </Card> */}
+        </React.Fragment>)
+}
 
-            <Card className={classes.modal}>
-                <form className={classes.modal_form} onSubmit={submitHandler}>
-                    <label htmlFor="email">e-mail</label>
-                    <input type="email" value={userEmail} name="email" id="email" onChange={emailChangeHandler} />
-
-                    <label htmlFor="password">Password</label>
-                    <input type="password" value={userPass} name="password" id="password" onChange={passChangeHandler} />
-
-                    <Button type='submit'>Log in</Button>
-                </form>
-            </Card>
-        </div>
+const Modal = (props) => {
+    return (
+        <React.Fragment>
+            {ReactDOM.createPortal(
+                <ModalOverlay onCloseModal={props.onCloseModal} />,
+                document.getElementById('modal-root')
+            )}
+        </React.Fragment >
     );
 };
 
