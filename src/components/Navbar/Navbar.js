@@ -6,7 +6,7 @@ import classes from './Navbar.module.css';
 const Navbar = (props) => {
 
     return (
-        <div className={classes.nav}>
+        <nav className={classes.nav}>
 
             <ul>
                 <li><img src={logo} alt='logo' /></li>
@@ -20,7 +20,7 @@ const Navbar = (props) => {
                 <li>Register</li>
             </ul>
 
-        </div>
+        </nav>
     );
 };
 
