@@ -21,6 +21,10 @@
     margin: 0 0.8rem;
 }
 
+.nav li:hover {
+    font-weight: bold;
+}
+
 .nav img {
     margin: 0.5rem;
     padding: 0;

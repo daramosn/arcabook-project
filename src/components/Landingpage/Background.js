@@ -7,6 +7,7 @@ import image4 from '../../images/bgimage4.jpg'
 import DescriptionPanel from './DescriptionPanel';
 import ImageWButton from './ImageWButton';
 import Modal from '../UI/Modal';
+import RegisterForm from '../Forms/RegisterForm';
 
 import classes from './Background.module.css';
 
@@ -14,14 +15,15 @@ const Background = (props) => {
     const [displayModal, setDisplayModal] = useState(false);
 
     const openModalToggleHandler = () => {
-        console.log('!!!!');
         setDisplayModal(!displayModal);
     }
 
     return (
         <React.Fragment>
             {displayModal ?
-                <Modal onCloseModal={openModalToggleHandler} />
+                <Modal onCloseModal={openModalToggleHandler}>
+                    <RegisterForm></RegisterForm>
+                </Modal>
                 : ''
             }
             <div className={classes.background}>

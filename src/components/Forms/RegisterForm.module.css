@@ -1,4 +1,4 @@
-.login_form {
+.register_form {
     margin: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
     text-align: left;
 }
 
-.login_form input {
+.register_form input {
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;
@@ -16,8 +16,8 @@
     max-width: 100%;
 }
 
-.login_form label {
+.register_form label {
     font-weight: bold;
     margin-bottom: 0.5rem;
-    display: inline;
+    display: inline-block;
 }

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import Button from '../UI/Button';
 
-import classes from './LoginForm.module.css';
+import classes from './RegisterForm.module.css';
 
-const LoginForm = (props) => {
+const RegisterForm = (props) => {
     const [userEmail, setUserEmail] = useState('');
     const [userPass, setUserPass] = useState('');
 
@@ -24,16 +24,20 @@ const LoginForm = (props) => {
     };
 
     return (
-        <form className={classes.login_form} onSubmit={submitHandler}>
+        <form className={classes.register_form} onSubmit={submitHandler}>
+            <label htmlFor="email">Name</label>
+            <br />
+            <input type="text" name="name" id="name" onChange={emailChangeHandler} />
+
             <label htmlFor="email">e-mail</label>
             <input type="email" value={userEmail} name="email" id="email" onChange={emailChangeHandler} />
 
             <label htmlFor="password">Password</label>
             <input type="password" value={userPass} name="password" id="password" onChange={passChangeHandler} />
 
-            <Button type='submit'>Log in</Button>
+            <Button type='submit'>Register</Button>
         </form>
     );
 };
 
-export default LoginForm;
+export default RegisterForm;
