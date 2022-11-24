@@ -1,0 +1,29 @@
+.book {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+}
+
+.book img {
+    width: 200px;
+}
+
+.book h2 {
+    margin: 1rem 0 0.3rem 0;
+    color: #161616;
+}
+
+.book h3 {
+    margin: 0 0 1rem 0;
+    color: #696363;
+}
+
+.book span {
+    width: max-content;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #E98E8E;
+    border-radius: 17px;
+    background-color: #E98E8E;
+}

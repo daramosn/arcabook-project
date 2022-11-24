@@ -1,0 +1,13 @@
+.bookboard {
+    margin: 2rem;
+}
+
+.bookboard .bb_card {
+    padding: 0.1rem;
+}
+
+.bookboard .searchbar {
+    margin: 3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
