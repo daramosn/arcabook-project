@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Book from './Book';
 
@@ -8,14 +9,15 @@ const Booklist = (props) => {
     return (
         <ul className={classes.book_list}>
             {props.list.map(book => (
-                <li>
-                    <Book
-                        key={book.id}
-                        cover={book.cover}
-                        name={book.name}
-                        author={book.author}
-                        username={book.username}
-                    />
+                <li key={book.id}>
+                    <Link to={`book-board/${book.id}`}>
+                        <Book
+                            cover={book.cover}
+                            name={book.name}
+                            author={book.author}
+                            username={book.username}
+                        />
+                    </Link>
                 </li>
             ))}
         </ul>

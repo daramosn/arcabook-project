@@ -21,6 +21,7 @@
 }
 
 .book span {
+    color: white;
     width: max-content;
     padding: 0.3rem 0.8rem;
     border: 1px solid #E98E8E;

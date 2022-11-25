@@ -4,6 +4,10 @@
     list-style: none;
 }
 
+.book_list a {
+    text-decoration: none;
+}
+
 .book_list li {
     display: inline-flex;
 }
