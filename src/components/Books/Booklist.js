@@ -10,7 +10,7 @@ const Booklist = (props) => {
         <ul className={classes.book_list}>
             {props.list.map(book => (
                 <li key={book.id}>
-                    <Link to={`book-board/${book.id}`}>
+                    <Link to={`/book-board/${book.id}`}>
                         <Book
                             cover={book.cover}
                             name={book.name}

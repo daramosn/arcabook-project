@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import logoFooter from '../../images/arcabook-1-crop.png'
 
@@ -8,7 +9,9 @@ const Footer = (props) => {
     return (
         <div className={classes.footer}>
             <ul>
-                <img src={logoFooter} alt="" />
+                <Link to='/home'>
+                    <img src={logoFooter} alt="" />
+                </Link>
             </ul>
 
             <ul>

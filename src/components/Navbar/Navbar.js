@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/arcabook-1-crop2.png';
 
 import Modal from '../UI/Modal'
@@ -25,8 +26,12 @@ const Navbar = (props) => {
 
                 <ul>
                     <li><img src={logo} alt='logo' /></li>
-                    <li>Home</li>
-                    <li>Contact</li>
+                    <Link to='/home'>
+                        <li>Home</li>
+                    </Link>
+                    <Link to='/book-board'>
+                        <li>Contact</li>
+                    </Link>
                     <li>About</li>
                 </ul>
 

@@ -3,7 +3,7 @@
 This is a web app for sharing and swapping our old books with other people
 
 ## Stack
-The stack for this project is MERN
+The stack used in this project is MERN
 
 ## Mock-ups
 
