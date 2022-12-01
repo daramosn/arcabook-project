@@ -20,13 +20,13 @@ const Background = (props) => {
 
     return (
         <React.Fragment>
-            {displayModal ?
+            {displayModal &&
                 <Modal onCloseModal={openModalToggleHandler}>
-                    <RegisterForm></RegisterForm>
+                    <RegisterForm onSubmit={openModalToggleHandler} />
                 </Modal>
-                : ''
             }
             <div className={classes.background}>
+
                 <div className={classes.bg_square}>
                     <ul>
                         <li>Arcabook</li>
@@ -36,17 +36,18 @@ const Background = (props) => {
                     </ul>
                 </div>
 
-                <ImageWButton onOpenModal={openModalToggleHandler} image={image2}>Register</ImageWButton>
+                <ImageWButton className={classes.bg_img} onOpenModal={openModalToggleHandler} image={image2}>Register</ImageWButton>
 
-                <DescriptionPanel />
+                <div>
+                    <DescriptionPanel />
+                </div>
 
                 <img className={classes.bg_img} src={image3} alt="image3" />
                 <div className={classes.bg_square}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem nulla nesciunt earum vitae adipisci id ipsum, quam et possimus fuga eaque illo molestiae assumenda quis repudiandae natus? Totam, architecto.</p>
+                    <p>Arcabook will help you to get new books just by swapping those that you have already read!</p>
                 </div>
 
                 <div className={classes.bg_square}>
-
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem nulla nesciunt earum vitae adipisci id ipsum, quam et possimus fuga eaque illo molestiae assumenda quis repudiandae natus? Totam, architecto.</p>
                 </div>
                 <img className={classes.bg_img} src={image4} alt="image4" />

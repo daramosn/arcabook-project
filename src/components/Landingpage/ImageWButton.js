@@ -6,7 +6,7 @@ import Button from '../UI/Button';
 
 const ImageWButton = (props) => {
     return (
-        <div className={classes.imagewbutton}>
+        <div className={`${classes.imagewbutton} ${props.className}`}>
             <img src={props.image} alt='image2' />
             <Button onClick={props.onOpenModal}>{props.children}</Button>
         </div>

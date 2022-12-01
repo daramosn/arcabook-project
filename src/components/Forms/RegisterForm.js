@@ -20,7 +20,7 @@ const RegisterForm = (props) => {
         event.preventDefault();
 
         console.log('submit handler!');
-        props.onCloseModal();
+        props.onSubmit();
     };
 
     return (

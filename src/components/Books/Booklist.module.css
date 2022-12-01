@@ -1,7 +1,12 @@
 .book_list {
-    margin: 1rem;
-    padding: 0;
+    /* margin: 1rem; */
+    padding: 1em;
     list-style: none;
+
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .book_list a {
@@ -9,5 +14,6 @@
 }
 
 .book_list li {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
 }

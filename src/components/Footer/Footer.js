@@ -9,7 +9,7 @@ const Footer = (props) => {
     return (
         <div className={classes.footer}>
             <ul>
-                <Link to='/home'>
+                <Link to='/'>
                     <img src={logoFooter} alt="" />
                 </Link>
             </ul>

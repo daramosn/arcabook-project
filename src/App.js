@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.css';
 
@@ -13,7 +13,9 @@ function App() {
   return (
     <div>
       <Switch>
-
+        <Route path='/' exact>
+          <Redirect to='/home' />
+        </Route>
         <Route path='/home'>
           <Navbar />
           <Background />

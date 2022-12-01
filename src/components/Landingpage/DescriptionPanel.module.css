@@ -1,15 +1,14 @@
 .panel {
     display: flex;
     margin: 2rem auto;
-    padding: auto;
+    padding: 2rem;
     width: 90%;
     max-width: 70rem;
     justify-content: space-around;
 }
 
 .panel img {
-    margin: 2rem;
-    width: 7rem;
+    width: clamp(85px, 15%, 145px);
     border-radius: 50%;
 }
 

@@ -18,7 +18,7 @@ const Navbar = (props) => {
         <React.Fragment>
             {displayModal ?
                 <Modal onCloseModal={openModalToggleHandler}>
-                    <LoginForm />
+                    <LoginForm onSubmit={openModalToggleHandler} />
                 </Modal>
                 : ''
             }
@@ -26,7 +26,7 @@ const Navbar = (props) => {
 
                 <ul>
                     <li><img src={logo} alt='logo' /></li>
-                    <Link to='/home'>
+                    <Link to='/'>
                         <li>Home</li>
                     </Link>
                     <Link to='/book-board'>
@@ -37,7 +37,7 @@ const Navbar = (props) => {
 
                 <ul>
                     <li onClick={openModalToggleHandler}>Log in</li>
-                    <li>Register</li>
+                    <li onClick={openModalToggleHandler}>Register</li>
                 </ul>
 
             </nav>
