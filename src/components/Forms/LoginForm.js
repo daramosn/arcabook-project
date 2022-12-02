@@ -30,7 +30,6 @@ const LoginForm = (props) => {
         localStorage.setItem('isLogged', '1');
 
         props.onSubmit();
-
     };
 
     if (isLogged === true) {

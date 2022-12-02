@@ -1,25 +1,38 @@
 .nav {
     margin: 0;
-    padding: 0.1rem;
+    padding: 0.5rem;
     display: flex;
+    gap: 0.8rem;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #785959;
 }
 
 .nav ul {
-    display: flex;
-    list-style-type: none;
     margin: 0;
-    padding: 0 1rem;
+    padding: 0;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-around;
+    list-style: none;
     align-items: center;
+    flex-grow: 2;
+}
+
+.nav ul:nth-of-type(2) {
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 5rem;
 }
 
 .nav li {
     color: white;
     text-decoration: none;
-    display: inline;
-    margin: 0 0.8rem;
+}
+
+.nav ul:nth-of-type(2) li {
+    flex-grow: 1;
+    text-align: center;
 }
 
 .nav li:hover {
@@ -27,8 +40,6 @@
 }
 
 .nav img {
-    margin: 0.5rem;
-    padding: 0;
     width: auto;
     height: 40px;
 }

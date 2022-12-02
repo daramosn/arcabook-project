@@ -1,11 +1,10 @@
 .login_form {
     display: grid;
     gap: 1rem;
-    justify-content: center;
+    place-items: center;
 }
 
 .login_form input {
-    max-width: 50rem;
+    width: min(200px, 15vw);
+    width: 20vw;
 }
-
-.login_form Button {}
