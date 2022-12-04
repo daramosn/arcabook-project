@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import classes from './LogModal.module.css';
+import Modal from '../UI/Modal';
+import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
+
+// import classes from './LogModal.module.css';
+
+
 
 const LogModal = (props) => {
-    return (
-        <div>
+    const [formSelector, setFormSelector] = useState(props.formSelectorValue);
 
-        </div>
+    const changeFormHandler = () => {
+        setFormSelector(formSelector === 'Log' ? 'Reg' : 'Log');
+    };
+
+    return (
+        <Modal onCloseModal={props.onDisplayModalToggleHandler}>
+            {(formSelector === 'Log') && <LoginForm onSubmit={props.onDisplayModalToggleHandler} onChangeForm={changeFormHandler} />}
+            {(formSelector === 'Reg') && <RegisterForm onSubmit={props.onDisplayModalToggleHandler} onChangeForm={changeFormHandler} />}
+        </Modal>
     );
+
 };
 
 export default LogModal;

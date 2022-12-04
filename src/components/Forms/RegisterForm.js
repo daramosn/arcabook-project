@@ -26,7 +26,6 @@ const RegisterForm = (props) => {
     return (
         <form className={classes.register_form} onSubmit={submitHandler}>
             <label htmlFor="email">Name</label>
-            <br />
             <input type="text" name="name" id="name" onChange={emailChangeHandler} />
 
             <label htmlFor="email">e-mail</label>
@@ -34,8 +33,12 @@ const RegisterForm = (props) => {
 
             <label htmlFor="password">Password</label>
             <input type="password" value={userPass} name="password" id="password" onChange={passChangeHandler} />
+            <label htmlFor="password2">Repeat password</label>
+            <input type="password2" value={userPass} name="password2" id="password2" onChange={passChangeHandler} />
 
             <Button type='submit'>Register</Button>
+
+            <h5 onClick={props.onChangeForm}>Do you have an account? Log in</h5>
         </form>
     );
 };

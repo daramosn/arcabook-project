@@ -25,7 +25,8 @@
     margin-left: 5rem;
 }
 
-.nav li {
+.nav li,
+.nav a {
     color: white;
     text-decoration: none;
 }

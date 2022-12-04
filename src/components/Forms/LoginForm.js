@@ -39,7 +39,7 @@ const LoginForm = (props) => {
     return (
         <form className={`${classes.login_form}`} onSubmit={submitHandler}>
 
-            <label htmlFor="email">e-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input type="email" value={userEmail} name="email" id="email" onChange={emailChangeHandler} />
 
             <label htmlFor="password">Password</label>
@@ -48,6 +48,8 @@ const LoginForm = (props) => {
             <Button type='submit'>Log in</Button>
 
             <h5>Forgot password?</h5>
+
+            <h5 onClick={props.onChangeForm}>No account? Create one</h5>
         </form>
     );
 };

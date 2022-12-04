@@ -6,25 +6,30 @@ import image4 from '../../images/bgimage4.jpg'
 
 import DescriptionPanel from './DescriptionPanel';
 import ImageWButton from './ImageWButton';
-import Modal from '../UI/Modal';
-import RegisterForm from '../Forms/RegisterForm';
+import LogModal from '../Forms/LogModal';
 
 import classes from './Background.module.css';
 
 const Background = (props) => {
     const [displayModal, setDisplayModal] = useState(false);
+    const [formSelector, setFormSelector] = useState('');
 
-    const openModalToggleHandler = () => {
-        setDisplayModal(!displayModal);
-    }
+    const clickRegisterHandler = () => {
+        setFormSelector('Reg');
+        setDisplayModal(true);
+    };
+
+    const modalToggleHandler = () => {
+        setDisplayModal(false);
+    };
 
     return (
         <React.Fragment>
+
             {displayModal &&
-                <Modal onCloseModal={openModalToggleHandler}>
-                    <RegisterForm onSubmit={openModalToggleHandler} />
-                </Modal>
+                <LogModal formSelectorValue={formSelector} onDisplayModalToggleHandler={modalToggleHandler} />
             }
+
             <div className={classes.background}>
 
                 <div className={classes.bg_square}>
@@ -36,7 +41,7 @@ const Background = (props) => {
                     </ul>
                 </div>
 
-                <ImageWButton className={classes.bg_img} onOpenModal={openModalToggleHandler} image={image2}>Register</ImageWButton>
+                <ImageWButton className={classes.bg_img} onOpenModal={clickRegisterHandler} image={image2}>Register</ImageWButton>
 
                 <div>
                     <DescriptionPanel />

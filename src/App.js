@@ -16,11 +16,13 @@ function App() {
         <Route path='/' exact>
           <Redirect to='/home' />
         </Route>
+
         <Route path='/home'>
           <Navbar />
           <Background />
           <Footer />
         </Route>
+
         <Route path='/book-board' exact>
           <Navbar />
           <Bookboard />
