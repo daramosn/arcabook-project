@@ -4,10 +4,6 @@ import Modal from '../UI/Modal';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-// import classes from './LogModal.module.css';
-
-
-
 const LogModal = (props) => {
     const [formSelector, setFormSelector] = useState(props.formSelectorValue);
 

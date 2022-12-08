@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Button from '../UI/Button';
+import AuthContext from '../../store/auth-context';
 
 import classes from './LoginForm.module.css';
 
 const LoginForm = (props) => {
     const [userEmail, setUserEmail] = useState('');
     const [userPass, setUserPass] = useState('');
-    const [isLogged, setIsLogged] = useState(false);
 
-    useEffect(() => {
-        const storedLoginInfo = localStorage.getItem('isLogged');
-        if (storedLoginInfo === '1') {
-            setIsLogged(true);
-        }
-    }, []);
+    const ctx = useContext(AuthContext);
 
     const emailChangeHandler = (event) => {
         setUserEmail(event.target.value);
@@ -26,15 +21,9 @@ const LoginForm = (props) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        setIsLogged(true);
-        localStorage.setItem('isLogged', '1');
-
+        ctx.onLogin();
         props.onSubmit();
     };
-
-    if (isLogged === true) {
-        return (<p>Welcome</p>);
-    }
 
     return (
         <form className={`${classes.login_form}`} onSubmit={submitHandler}>
