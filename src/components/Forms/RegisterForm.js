@@ -48,7 +48,7 @@ const RegisterForm = (props) => {
 
             <Button type='submit'>Register</Button>
 
-            <h5 onClick={props.onChangeForm}>Do you have an account? Log in</h5>
+            <h5 onClick={props.onChangeForm}>Do you have an account? <span>Log in</span></h5>
         </form>
     );
 };

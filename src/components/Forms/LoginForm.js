@@ -38,7 +38,7 @@ const LoginForm = (props) => {
 
             <h5>Forgot password?</h5>
 
-            <h5 onClick={props.onChangeForm}>No account? Create one</h5>
+            <h5 onClick={props.onChangeForm}>No account? <span>Create one</span></h5>
         </form>
     );
 };

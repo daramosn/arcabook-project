@@ -16,9 +16,6 @@
     place-items: center;
 }
 
-.panel>*:hover {
-    color: rgb(0, 0, 0);
-}
 
 .panel>* {
     border-radius: 50%;
@@ -42,6 +39,10 @@
 }
 
 .panel img:hover {
-    opacity: 0.5;
+    opacity: 0.3;
     transition: 0.5s;
+}
+
+.panel>*:hover {
+    color: #4E9FD9;
 }

@@ -16,3 +16,12 @@
     font-size: 1.2rem;
     margin-right: auto;
 }
+
+.register_form h5 span {
+    cursor: pointer;
+    color: #4E9FD9;
+}
+
+.register_form h5 span:hover {
+    text-decoration: underline;
+}

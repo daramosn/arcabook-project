@@ -19,11 +19,7 @@
     flex-grow: 2;
 }
 
-.nav ul:nth-of-type(2) {
-    flex-grow: 1;
-    justify-content: center;
-    margin-left: 5rem;
-}
+
 
 .nav li,
 .nav a {
@@ -37,7 +33,9 @@
 }
 
 .nav li:hover {
-    font-weight: bold;
+    /* transform: translateY(-3px); */
+    padding-bottom: 3px;
+    transition: 0.15s;
 }
 
 .nav img {

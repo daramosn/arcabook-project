@@ -1,6 +1,7 @@
 .background {
     display: grid;
     grid-template-columns: 1fr;
+    user-select: none;
 }
 
 .background>* {
@@ -12,6 +13,7 @@
 
 .background .bg_img {
     object-fit: cover;
+    object-position: center 30%;
 }
 
 .background .bg_img:last-of-type {
@@ -42,6 +44,11 @@
 .background li {
     font-size: 5vw;
     padding-bottom: 0.6rem;
+}
+
+.background li:hover {
+    color: rgb(216, 216, 216);
+    transition: 0.2s;
 }
 
 .background .bg_square {

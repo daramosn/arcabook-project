@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/arcabook-1-crop2.png';
+import AuthContext from '../../store/auth-context';
 
 import LogModal from '../Forms/LogModal';
 
 import classes from './Navbar.module.css';
 
 const Navbar = (props) => {
+
+    const ctx = useContext(AuthContext);
 
     const [displayModal, setDisplayModal] = useState(false);
     const [formSelector, setFormSelector] = useState('');
@@ -38,13 +41,13 @@ const Navbar = (props) => {
                     <Link to='/'>
                         <li>Home</li>
                     </Link>
-                    {props.onIsLogged &&
+                    {ctx.isLogged &&
                         <Link to='/book-board'>
                             <li>Books</li>
                         </Link>}
                     <li>About</li>
                 </ul>
-                {!props.onIsLogged ?
+                {!ctx.isLogged ?
                     <ul>
                         <li onClick={clickLoginHandler}>Log in</li>
                         <li onClick={clickRegisterHandler}>Register</li>
@@ -52,7 +55,7 @@ const Navbar = (props) => {
                     : <ul>
                         <li >Profile</li>
                         <Link to='/'>
-                            <li onClick={props.onLogout}>Logout</li>
+                            <li onClick={ctx.onLogout}>Logout</li>
                         </Link>
 
                     </ul>
