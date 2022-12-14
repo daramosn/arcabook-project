@@ -25,7 +25,6 @@ export const AuthContextProvider = (props) => {
         setIsLogged(false);
     };
 
-
     return (
         <AuthContext.Provider value={{ isLogged: isLogged, onLogin: loginHandler, onLogout: logoutHandler }}>
             {props.children}

@@ -1,13 +1,13 @@
 .book {
     /* margin: 2rem 1rem;    */
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 200px;
-    align-items: center;
+    place-items: center;
+    text-align: center;
 }
 
 .book img {
-    width: 200px;
+    width: 100%;
 }
 
 .book h2 {
@@ -28,3 +28,13 @@
     border-radius: 17px;
     background-color: #E98E8E;
 }
+
+/* @media (max-width: 391px) {
+    .book {
+        width: 110px;
+    }
+    .book h2,
+    .book h3 {
+        font-size: 95%;
+    }
+} */

@@ -45,7 +45,6 @@ const Navbar = (props) => {
                         <Link to='/book-board'>
                             <li>Books</li>
                         </Link>}
-                    <li>About</li>
                 </ul>
                 {!ctx.isLogged ?
                     <ul>
