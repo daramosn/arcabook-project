@@ -44,11 +44,11 @@
 .background li {
     font-size: 5vw;
     padding-bottom: 0.6rem;
+    transition: 0.4s;
 }
 
 .background li:hover {
     color: rgb(216, 216, 216);
-    transition: 0.2s;
 }
 
 .background .bg_square {
@@ -58,8 +58,6 @@
     padding: 2.2rem;
     text-align: center;
 }
-
-
 
 @media (min-width: 650px) {
     .background {
@@ -78,7 +76,4 @@
     .background .bg_img:last-of-type {
         grid-row: auto;
     }
-
-
-
 }

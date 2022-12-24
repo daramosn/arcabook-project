@@ -38,9 +38,6 @@ const Navbar = (props) => {
             <nav className={classes.nav}>
                 <ul>
                     <li><img src={logo} alt='logo' /></li>
-                    <Link to='/'>
-                        <li>Home</li>
-                    </Link>
                     {ctx.isLogged &&
                         <Link to='/book-board'>
                             <li>Books</li>
@@ -49,7 +46,7 @@ const Navbar = (props) => {
                 {!ctx.isLogged ?
                     <ul>
                         <li onClick={clickLoginHandler}>Log in</li>
-                        <li onClick={clickRegisterHandler}>Register</li>
+                        {/* <li onClick={clickRegisterHandler}>Register</li> */}
                     </ul>
                     : <ul>
                         <li >Profile</li>
